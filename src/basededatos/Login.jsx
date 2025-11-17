@@ -25,14 +25,14 @@ function Login() {
       <form onSubmit={handleLogin}>
         <input
           type="email"
-          placeholder="Correo electrónico"
+          placeholder="E-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
-          placeholder="Contraseña"
+          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required

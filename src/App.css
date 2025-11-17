@@ -1,49 +1,151 @@
-/* Centra todo el contenido vertical y horizontalmente */
+/* Fondo general oscuro y fuente limpia */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Contenedor principal centrado */
 .app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
-  text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-/* Estilo del encabezado */
+/* Encabezado con estilo de cine */
 .header {
+  text-align: center;
   margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #ff3c00;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
 
 /* Botones de navegación */
 .nav-links {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .btn-superior-derecho,
 .btn-superior-izquierdo {
   margin: 0 10px;
   padding: 10px 20px;
-  background-color: #444;
+  background-color: #ff3c00;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn-superior-derecho:hover,
 .btn-superior-izquierdo:hover {
-  background-color: #666;
+  background-color: #ff5722;
 }
 
 /* Sección de posts */
 .feed {
-  max-width: 600px;
   width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.feed h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ff3c00;
 }
 
 .post-card {
-  background-color: #222;
-  color: white;
+  background-color: #1e1e1e;
   padding: 15px;
-  margin: 10px 0;
+  margin-bottom: 15px;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 60, 0, 0.2);
+}
+
+.post-card p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.post-card span {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.logout-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff3c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ff5722;
+}
+
+
+.create-post-form {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  max-width: 600px;
+  width: 100%;
+  color: white;
+}
+
+.create-post-form h2 {
+  color: #ff3c00;
+  margin-bottom: 15px;
+}
+
+.create-post-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+}
+
+.create-post-form input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.create-post-form button {
+  background-color: #ff3c00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }

@@ -1,19 +1,23 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth"; // ← asegúrate de tener esto
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore"; // ✅
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB0iiiyGK7VDEyJcQfOEgHAZ7C-",
+  apiKey: "AIzaSyBoiiGykCIs33rYngB_YDEjCQfOEgHAZ7c",
   authDomain: "cinetribe-f19b9.firebaseapp.com",
   projectId: "cinetribe-f19b9",
   storageBucket: "cinetribe-f19b9.appspot.com",
-  messagingSenderId: "300fcf3f3f3",
-  appId: "1:300fcf3f3f3:web:50fcf3f3f3f3f3f3f3f3f3",
-  measurementId: "G-MQ3SM2H1KZ"
+  messagingSenderId: "397393446617",
+  appId: "1:397393446617:web:500cf13f5597aff9b5e0c8",
+  measurementId: "G-MQS3ME1RJX"
 };
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth(app); // ← crea la instancia
+const auth = getAuth(app);
+const storage = getStorage(app);
+const db = getFirestore(app); // ✅
 
-export { auth }; // ← exporta para que Login.jsx y Signup.jsx puedan usarla
+export { auth, storage, db };

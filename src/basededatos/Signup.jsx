@@ -26,19 +26,19 @@ function SignUp() {
       <form onSubmit={handleSignUp}>
         <input
           type="email"
-          placeholder="Correo electrónico"
+          placeholder="E-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
-          placeholder="Contraseña"
+          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Registrarse</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
