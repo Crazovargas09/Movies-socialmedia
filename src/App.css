@@ -1,8 +1,11 @@
-/* Fondo general oscuro y fuente limpia */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
+  background: url('/cinema_chairs.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* efecto parallax */
   color: #f0f0f0;
 }
 
