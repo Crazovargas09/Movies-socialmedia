@@ -11,11 +11,11 @@ function CreatePost() {
     e.preventDefault();
 
     if (!image || !text) {
-      return alert("Debes subir una imagen y escribir algo.");
+      return alert("You must provide both text and an image.");
     }
 
     if (!auth.currentUser) {
-      return alert("Debes iniciar sesión para publicar.");
+      return alert("You must be logged in to create a post.");
     }
 
     setLoading(true);
@@ -47,10 +47,10 @@ function CreatePost() {
 
       setText("");
       setImage(null);
-      alert("¡Post creado con éxito!");
+      alert("¡Post created successfully!");
     } catch (error) {
-      console.error("Error al crear el post:", error);
-      alert("Hubo un problema al subir el post.");
+      console.error("Error Creating Post", error);
+      alert("There was an error creating the post: " + error.message);
     } finally {
       setLoading(false);
     }
