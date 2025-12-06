@@ -12,10 +12,10 @@ function Login() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert('Sesión iniciada correctamente');
+      alert('Successful login');
       navigate('/');
     } catch (error) {
-      alert('Error al iniciar sesión: ' + error.message);
+      alert('Error log in: ' + error.message);
     }
   };
 

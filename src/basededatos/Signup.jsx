@@ -12,10 +12,10 @@ function SignUp() {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      alert('Usuario registrado con éxito');
+      alert('User registered successfully');
       navigate('/');
     } catch (error) {
-      alert('Error al registrarse: ' + error.message);
+      alert('Error sign Up: ' + error.message);
     }
   };
 
