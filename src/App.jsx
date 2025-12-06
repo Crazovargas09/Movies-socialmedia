@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth, db } from './basededatos/conexion';
-import { collection, getDocs } from 'firebase/firestore';
-import Login from './basededatos/Login.jsx';
-import SignUp from './basededatos/Signup.jsx';
-import CreatePost from './basededatos/createpost.jsx';
-import './App.css';
+// src/App.jsx
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth, db } from "./basededatos/conexion";
+import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import Login from "./basededatos/Login.jsx";
+import SignUp from "./basededatos/Signup.jsx";
+import CreatePost from "./basededatos/createpost.jsx";
+import "./App.css";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -20,20 +21,23 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "posts"));
-        const loadedPosts = querySnapshot.docs.map(doc => ({
+    const q = query(collection(db, "posts"), orderBy("createdAt", "desc"));
+
+    const unsubscribe = onSnapshot(
+      q,
+      (querySnapshot) => {
+        const loadedPosts = querySnapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data()
+          ...doc.data(),
         }));
         setPosts(loadedPosts);
-      } catch (error) {
-        console.error("Error loading posts:", error);
+      },
+      (error) => {
+        console.error("Error cargando posts:", error);
       }
-    };
+    );
 
-    fetchPosts();
+    return () => unsubscribe();
   }, []);
 
   return (
@@ -45,36 +49,52 @@ function App() {
           <nav className="nav-links">
             {!user ? (
               <>
-                <Link to="/login" className="btn-superior-derecho">Log in</Link>
-                <Link to="/signup" className="btn-superior-izquierdo">Sign up</Link>
+                <Link to="/login" className="btn-superior-derecho">
+                  Log in
+                </Link>
+                <Link to="/signup" className="btn-superior-izquierdo">
+                  Sign up
+                </Link>
               </>
             ) : (
               <div className="user-session">
                 <p>Welcome back, {user.email}!</p>
-                <button onClick={() => signOut(auth)} className="logout-button">Log out</button>
+                <button onClick={() => signOut(auth)} className="logout-button">
+                  Log out
+                </button>
               </div>
             )}
           </nav>
         </header>
 
         <Routes>
-          <Route path="/" element={
-            <section className="feed">
-              {user && <CreatePost />}
-              <h2>Latest Posts</h2>
-              {posts.length === 0 ? (
-                <p>No posts yet</p>
-              ) : (
-                posts.map((p) => (
-                  <div key={p.id} className="post-card">
-                    <img src={p.imageUrl} alt="Movie" className="post-image" />
-                    <p>{p.text}</p>
-                    <span>Publicado por: {p.userEmail}</span>
-                  </div>
-                ))
-              )}
-            </section>
-          } />
+          <Route
+            path="/"
+            element={
+              <section className="feed">
+                {user && <CreatePost />}
+                <h2>Latest Posts</h2>
+
+                {posts.length === 0 ? (
+                  <p>No posts yet</p>
+                ) : (
+                  posts.map((p) => (
+                    <div key={p.id} className="post-card">
+                      {p.imageUrl && (
+                        <img
+                          src={p.imageUrl}
+                          alt="Movie"
+                          className="post-image"
+                        />
+                      )}
+                      <p>{p.text}</p>
+                      <span>Publicado por: {p.userEmail}</span>
+                    </div>
+                  ))
+                )}
+              </section>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
