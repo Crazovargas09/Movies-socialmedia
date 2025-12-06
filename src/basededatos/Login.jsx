@@ -22,7 +22,7 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2>WELCOME BACK!</h2>
+        <h2>WELCOME BACK! 🤩</h2>
 
         <form onSubmit={handleLogin}>
           <input

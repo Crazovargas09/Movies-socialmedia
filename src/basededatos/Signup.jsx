@@ -44,7 +44,7 @@ function SignUp() {
           />
 
           <button type="submit" className="signup-button">
-            REGISTER
+            CREATE
           </button>
         </form>
       </div>
