@@ -224,7 +224,6 @@ body::before {
   box-shadow: 0 0 20px rgba(255, 60, 0, 0.15);
 }
 
-/* Título */
 .login-box h2 {
   color: #ff3c00;
   font-size: 2rem;
@@ -233,7 +232,6 @@ body::before {
   text-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
 }
 
-/* Inputs */
 .login-input {
   width: 100%;
   padding: 14px;
@@ -251,7 +249,7 @@ body::before {
   outline: 2px solid #ff3c00;
 }
 
-/* Botón */
+
 .login-button {
   width: 40%;
   padding: 14px;
