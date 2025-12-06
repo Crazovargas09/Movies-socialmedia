@@ -67,12 +67,12 @@ function CreatePost() {
       />
 
       <textarea
-        placeholder="write your opinion..."
+        placeholder="Write your opinion..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
 
-      <button type="submit" disabled={loading}>
+      <button type="Submit" disabled={loading}>
         {loading ? "Posting..." : "Publish"}
       </button>
     </form>
