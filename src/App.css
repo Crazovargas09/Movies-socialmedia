@@ -253,7 +253,7 @@ body::before {
 
 /* Botón */
 .login-button {
-  width: 100%;
+  width: 40%;
   padding: 14px;
   font-size: 1.1rem;
   font-weight: bold;

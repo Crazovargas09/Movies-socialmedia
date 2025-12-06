@@ -44,7 +44,7 @@ function Login() {
           />
 
           <button type="submit" className="login-button">
-            Log In
+            LOG IN
           </button>
         </form>
       </div>
