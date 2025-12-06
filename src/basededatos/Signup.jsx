@@ -1,4 +1,3 @@
-// SignUp.js
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './conexion';
@@ -22,24 +21,33 @@ function SignUp() {
 
   return (
     <div className="signup-container">
-      <h2>Crear cuenta</h2>
-      <form onSubmit={handleSignUp}>
-        <input
-          type="email"
-          placeholder="E-mail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Register</button>
-      </form>
+      <div className="signup-box">
+        <h2>CREATE ACCOUNT 🍿</h2>
+
+        <form onSubmit={handleSignUp}>
+          <input
+            type="email"
+            placeholder="E-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="signup-input"
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className="signup-input"
+          />
+
+          <button type="submit" className="signup-button">
+            REGISTER
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
