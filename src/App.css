@@ -2,23 +2,32 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('/cinema_chairs.jpg');
+  background: url('/cinema_chairs.jpg') no-repeat center center fixed;
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* efecto parallax */
   color: #f0f0f0;
 }
 
-/* Contenedor principal centrado */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 40px 20px;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: -1;
 }
 
+/* Contenedor principal centrado */
+.app-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
 /* Encabezado con estilo de cine */
 .header {
   width: 100%;
@@ -34,11 +43,10 @@ body {
 }
 
 .header h1 {
-  font-size: 3rem;
-  color: #ffd900;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  text-shadow: 0 0 15px rgba(255, 217, 0, 0.6);
 }
+
 
 .header p {
   font-size: 1.2rem;
@@ -63,7 +71,7 @@ body {
   background-color: #ff3c00;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
@@ -87,12 +95,8 @@ body {
 }
 
 .post-card {
-  background-color: #1b1b1b;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 14px;
-  box-shadow: 0 4px 15px rgba(255, 60, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(20,20,20,0.85);
+  border: 1px solid rgba(255, 60, 0, 0.12);
 }
 
 .post-card:hover {

@@ -44,16 +44,16 @@ function App() {
     <Router>
       <div className="app-container">
         <header className="header">
-          <h1>CineTribe 🎬</h1>
+          <h1>MOVIECORN 🎬</h1>
           <p>Share your opinion about your favorite movie with others</p>
           <nav className="nav-links">
             {!user ? (
               <>
                 <Link to="/login" className="btn-superior-derecho">
-                  Log in
+                  LOG IN
                 </Link>
                 <Link to="/signup" className="btn-superior-izquierdo">
-                  Sign up
+                  SIGN UP
                 </Link>
               </>
             ) : (
@@ -88,7 +88,7 @@ function App() {
                         />
                       )}
                       <p>{p.text}</p>
-                      <span>Publicado por: {p.userEmail}</span>
+                      <span>Published by: {p.userEmail}</span>
                     </div>
                   ))
                 )}
