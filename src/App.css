@@ -199,3 +199,76 @@ body::before {
   border-radius: 5px;
   margin-bottom: 10px;
 }
+
+/* Fondo centrado con transparencia */
+.login-container {
+  width: 90%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Caja del login */
+.login-box {
+  background: rgba(20, 20, 20, 0.88);
+  backdrop-filter: blur(4px);
+  padding: 50px;
+  border-radius: 25px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 60, 0, 0.2);
+  box-shadow: 0 0 20px rgba(255, 60, 0, 0.15);
+}
+
+/* Título */
+.login-box h2 {
+  color: #ff3c00;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+}
+
+/* Inputs */
+.login-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-input:focus {
+  outline: 2px solid #ff3c00;
+}
+
+/* Botón */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #ff3c00;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease, transform 0.15s ease;
+}
+
+.login-button:hover {
+  background-color: #ff5722;
+}
+
+.login-button:active {
+  transform: scale(0.97);
+}
