@@ -15,14 +15,14 @@ function SignUp() {
       alert('User registered successfully');
       navigate('/');
     } catch (error) {
-      alert('Error sign Up: ' + error.message);
+      alert('Error sign up: ' + error.message);
     }
   };
 
   return (
     <div className="signup-container">
       <div className="signup-box">
-        <h2>CREATE ACCOUNT 🍿</h2>
+        <h2>CREATE ACCOUNT</h2>
 
         <form onSubmit={handleSignUp}>
           <input
@@ -47,6 +47,9 @@ function SignUp() {
             CREATE
           </button>
         </form>
+      </div>
+      <div className="signup2">
+        <p>Hola</p>
       </div>
     </div>
   );

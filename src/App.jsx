@@ -42,12 +42,11 @@ function App() {
 
   return (
     <Router>
-      <div className="app-container">
-        <header className="header">
-          <h1>MOVIECORN 🎬</h1>
-          <p>Share your opinion about your favorite movie with others</p>
-          <nav className="nav-links">
-            {!user ? (
+      <navBar/>
+      <div className="navBar">
+        <h1>🍿MOVIECORN</h1>
+        <div className="buttons-navBar">
+          {!user ? (
               <>
                 <Link to="/login" className="btn-superior-derecho">
                   LOG IN
@@ -58,13 +57,18 @@ function App() {
               </>
             ) : (
               <div className="user-session">
-                <p>Welcome back, {user.email}!</p>
+                <p>Hi {user.email}!</p>
                 <button onClick={() => signOut(auth)} className="logout-button">
-                  Log out
+                  LOG OUT
                 </button>
               </div>
             )}
-          </nav>
+        </div>
+      </div>
+
+      <div className="app-container">
+        <header className="header">
+          <p>Share your opinion about your favorite movie with others</p>
         </header>
 
         <Routes>
