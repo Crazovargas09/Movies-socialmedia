@@ -58,7 +58,7 @@ function CreatePost() {
 
   return (
     <form onSubmit={handleSubmit} className="create-post-form">
-      <h2>Crear nuevo post</h2>
+      <h2>Create new post</h2>
 
       <input
         type="file"

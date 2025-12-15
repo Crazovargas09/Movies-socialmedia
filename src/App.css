@@ -72,7 +72,7 @@ body::before {
 .header {
   width: 100%;
   text-align: center;
-  border: solid #d2a21d 2px;
+  border: solid #d2a21d 5px;
   border-radius: 20px;
   padding: 0px;
 }
@@ -176,7 +176,7 @@ body::before {
   margin-top: 10px;
   padding: 5px 10px;
   background-color:  #d2a21d;
-  color: white;
+  color: black;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -187,6 +187,7 @@ body::before {
 
 .logout-button:hover {
   background-color: #685113;
+  color: white;
 }
 
 
@@ -198,7 +199,7 @@ body::before {
   width: 100%;
   max-width: 620px;
   box-shadow: 0 0 15px rgba(255, 60, 0, 0.15);
-  border: 1px solid rgba(255, 60, 0, 0.15);
+  border: 1px solid rgba(255, 191, 0, 0.2);
 }
 
 .create-post-form h2 {
@@ -251,7 +252,7 @@ body::before {
 
 /* Fondo centrado con transparencia */
 .login-container {
-  width: 90%;
+  width: 100%;
   min-height: 50vh;
   display: flex;
   justify-content: center;
@@ -266,7 +267,7 @@ body::before {
   padding: 50px;
   border-radius: 25px;
   max-width: 450px;
-  width: 100%;
+  width: 45%;
   text-align: center;
   justify-content: center;
   border: 1px solid rgba(255, 191, 0, 0.2);
@@ -300,7 +301,7 @@ body::before {
 
 
 .login-button {
-  width: 25%;
+  width: 40%;
   padding: 14px;
   font-size: 20px;
   font-weight: bold;
@@ -332,24 +333,16 @@ body::before {
   padding: 20px;
 }
 
-.signup2{
-  margin-left: 50px;
-  color: #fff;
-  font-size: 1.2rem;
-  max-width: 400px;
-  background-color: aqua;
-}
-
 .signup-box {
   background: rgba(20, 20, 20, 0.88);
   backdrop-filter: blur(4px);
   padding: 50px;
   border-radius: 25px;
   max-width: 450px;
-  width: 100%;
+  width: 45%;
   text-align: center;
   justify-content: center;
-  border: 1px solid rgba(255, 60, 0, 0.2);
+  border: 1px solid rgba(255, 191, 0, 0.2);
   box-shadow: 0 0 20px rgba(255, 60, 0, 0.15);
 }
 
@@ -381,18 +374,19 @@ body::before {
 .signup-button {
   width: 40%;
   padding: 14px;
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: bold;
-  background-color: #d2a21d;
+  background-color:  #d2a21d;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  color: white;
+  color: black;
   transition: background 0.3s ease, transform 0.15s ease;
 }
 
 .signup-button:hover {
-  background-color:#685113;
+  background-color: #685113;
+  color: white;
 }
 
 .signup-button:active {

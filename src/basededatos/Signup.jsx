@@ -22,7 +22,7 @@ function SignUp() {
   return (
     <div className="signup-container">
       <div className="signup-box">
-        <h2>CREATE ACCOUNT</h2>
+        <h2>CREATE ACCOUNT! ⭐</h2>
 
         <form onSubmit={handleSignUp}>
           <input
@@ -44,7 +44,7 @@ function SignUp() {
           />
 
           <button type="submit" className="signup-button">
-            CREATE
+            JOIN
           </button>
         </form>
       </div>
