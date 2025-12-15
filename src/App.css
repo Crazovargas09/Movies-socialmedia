@@ -72,8 +72,6 @@ body::before {
 .header {
   width: 100%;
   text-align: center;
-  border: solid #d2a21d 5px;
-  border-radius: 20px;
   padding: 0px;
 }
 
@@ -266,7 +264,6 @@ body::before {
   backdrop-filter: blur(4px);
   padding: 50px;
   border-radius: 25px;
-  max-width: 450px;
   width: 45%;
   text-align: center;
   justify-content: center;
