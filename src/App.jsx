@@ -7,6 +7,7 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import Login from "./basededatos/Login.jsx";
 import SignUp from "./basededatos/Signup.jsx";
 import CreatePost from "./basededatos/createpost.jsx";
+import Comments from "./basededatos/comments.jsx"; // 👈 Importamos el componente de comentarios
 import "./App.css";
 
 function App() {
@@ -98,6 +99,9 @@ function App() {
                       )}
                       <p>{p.text}</p>
                       <span>Published by: {p.userEmail}</span>
+
+                      {/* 👇 Aquí se muestran los comentarios de cada post */}
+                      <Comments postId={p.id} />
                     </div>
                   ))
                 )}
