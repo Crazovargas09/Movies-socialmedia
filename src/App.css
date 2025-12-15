@@ -32,6 +32,28 @@ body::before {
   display: flex;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.logo-container img {
+  height: 150px;
+  width: auto;
+}
+
+.title-navBar {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-family: 'Arial Black', sans-serif;
+  color: #d2a21d;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 60, 0, 0.5);
+}
+
 .buttons-navBar {
   margin-left: auto;
   align-items: center;
@@ -81,17 +103,13 @@ body::before {
   font-size: 25px;
 }
 
-.IDuser {
-  color: #ff3c00;
-  font-size: 25px;
-}
 
 .btn-superior-derecho,
 .btn-superior-izquierdo {
   margin: 0 10px;
   padding: 10px 20px;
-  background-color: #ff3c00;
-  color: white;
+  background-color: #d2a21d;
+  color:#181818;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
@@ -100,7 +118,8 @@ body::before {
 
 .btn-superior-derecho:hover,
 .btn-superior-izquierdo:hover {
-  background-color: #ff5722;
+  background-color: #685113;
+  color:white;
 }
 
 /* Sección de posts */
@@ -113,7 +132,7 @@ body::before {
 .feed h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #ff3c00;
+  color: #d2a21d;
 }
 
 .post-card {
@@ -138,7 +157,7 @@ body::before {
 
 .post-card span {
   font-size: 0.85rem;
-  color: #ff3c00;
+  color:  #d2a21d;
   font-weight: 600;
 }
 
@@ -153,7 +172,7 @@ body::before {
 .logout-button {
   margin-top: 10px;
   padding: 5px 10px;
-  background-color: #ff3c00;
+  background-color:  #d2a21d;
   color: white;
   border: none;
   border-radius: 5px;
@@ -164,7 +183,7 @@ body::before {
 }
 
 .logout-button:hover {
-  background-color: #ff5722;
+  background-color: #685113;
 }
 
 
@@ -180,7 +199,7 @@ body::before {
 }
 
 .create-post-form h2 {
-  color: #ff3c00;
+  color:  #d2a21d;
   margin-bottom: 15px;
 }
 
@@ -195,7 +214,7 @@ body::before {
   color: #fff;
 }
 .create-post-form textarea:focus {
-  outline: 2px solid #ff3c00;
+  outline: 2px solid  #d2a21d;
 }
 
 .create-post-form input[type="file"] {
@@ -206,7 +225,7 @@ body::before {
 .create-post-form button {
   width: 20%;
   padding: 12px;
-  background-color: #ff3c00;
+  background-color:  #d2a21d;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1rem;
@@ -216,7 +235,7 @@ body::before {
 }
 
 .create-post-form button:hover {
-  background-color: #ff5722;
+  background-color: #685113;
 }
 
 .post-image {
@@ -252,7 +271,7 @@ body::before {
 }
 
 .login-box h2 {
-  color: #ff3c00;
+  color:  #d2a21d;
   font-size: 2rem;
   margin-bottom: 25px;
   letter-spacing: 1px;
@@ -282,7 +301,7 @@ body::before {
   padding: 14px;
   font-size: 1.1rem;
   font-weight: bold;
-  background-color: #ff3c00;
+  background-color:  #d2a21d;
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -291,7 +310,7 @@ body::before {
 }
 
 .login-button:hover {
-  background-color: #ff5722;
+  background-color: #685113;
 }
 
 .login-button:active {
@@ -331,7 +350,7 @@ body::before {
 }
 
 .signup-box h2 {
-  color: #ff3c00;
+  color:  #d2a21d;
   font-size: 2rem;
   margin-bottom: 25px;
   text-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
@@ -360,7 +379,7 @@ body::before {
   padding: 14px;
   font-size: 1.1rem;
   font-weight: bold;
-  background-color: #ff3c00;
+  background-color: #d2a21d;
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -369,7 +388,7 @@ body::before {
 }
 
 .signup-button:hover {
-  background-color: #ff5722;
+  background-color:#685113;
 }
 
 .signup-button:active {

@@ -44,7 +44,12 @@ function App() {
     <Router>
       <navBar/>
       <div className="navBar">
-        <h1>🍿MOVIECORN</h1>
+        <div className="logo-container">
+          <img src="/public/logoCine.png" alt="Movie Icon" className="movie-icon"/>
+        </div>
+        <div className="title-navBar">
+          <h1>MOVIECORN</h1>
+        </div>
         <div className="buttons-navBar">
           {!user ? (
               <>
@@ -77,7 +82,7 @@ function App() {
             element={
               <section className="feed">
                 {user && <CreatePost />}
-                <h2>Latest Posts</h2>
+                <h2>LATEST POSTS</h2>
 
                 {posts.length === 0 ? (
                   <p>No posts yet</p>
