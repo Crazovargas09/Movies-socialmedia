@@ -45,7 +45,7 @@ function App() {
       <navBar/>
       <div className="navBar">
         <div className="logo-container">
-          <img src="/public/logoCine.png" alt="Movie Icon" className="movie-icon"/>
+          <img src="/logoCine.png" alt="Movie Icon" className="movie-icon"/>
         </div>
         <div className="title-navBar">
           <h1>MOVIECORN</h1>

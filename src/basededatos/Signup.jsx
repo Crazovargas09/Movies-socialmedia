@@ -48,9 +48,6 @@ function SignUp() {
           </button>
         </form>
       </div>
-      <div className="signup2">
-        <p>Hola</p>
-      </div>
     </div>
   );
 }

@@ -29,7 +29,7 @@ body::before {
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  display: flex;
+  display: flex;  
 }
 
 .logo-container {
@@ -39,7 +39,7 @@ body::before {
 }
 
 .logo-container img {
-  height: 150px;
+  height: 100px;
   width: auto;
 }
 
@@ -68,10 +68,13 @@ body::before {
   margin: auto;
   padding: 40px 20px;
 }
-/* Encabezado con estilo de cine */
+
 .header {
   width: 100%;
   text-align: center;
+  border: solid #d2a21d 2px;
+  border-radius: 20px;
+  padding: 0px;
 }
 
 .header p {
@@ -266,7 +269,7 @@ body::before {
   width: 100%;
   text-align: center;
   justify-content: center;
-  border: 1px solid rgba(255, 60, 0, 0.2);
+  border: 1px solid rgba(255, 191, 0, 0.2);
   box-shadow: 0 0 20px rgba(255, 60, 0, 0.15);
 }
 
@@ -275,7 +278,7 @@ body::before {
   font-size: 2rem;
   margin-bottom: 25px;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+  text-shadow: 0 0 10px rgba(255, 221, 0, 0.4);
 }
 
 .login-input {
@@ -292,25 +295,26 @@ body::before {
 }
 
 .login-input:focus {
-  outline: 2px solid #ff3c00;
+  outline: 2px solid #d2a21d;
 }
 
 
 .login-button {
-  width: 40%;
+  width: 25%;
   padding: 14px;
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: bold;
   background-color:  #d2a21d;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  color: white;
+  color: black;
   transition: background 0.3s ease, transform 0.15s ease;
 }
 
 .login-button:hover {
   background-color: #685113;
+  color: white;
 }
 
 .login-button:active {
